@@ -1,0 +1,43 @@
+.pagina{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    "a a a"
+    "b c c"
+    "d d d";
+    height: 100vh;
+    width: 100vw;
+}
+.contenedor{
+    font-size: 11px;
+    font-weight:400;
+    color: black;
+}
+.cabeza{
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+.indice{
+    font-size: 17px;
+    font-weight: bold;
+    color: black;
+}
+.referencias{
+font-size: 15px;
+    font-weight: bold;
+    color: black;
+}
+header{
+    grid-area: a;
+}
+nav{
+     grid-area: b;
+}
+main{
+     grid-area: c;
+}
+footer{
+     grid-area: d;
+}
