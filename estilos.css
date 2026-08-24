@@ -1,42 +1,46 @@
-.pagina{
+.contenedor-wiki{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas:
-    "a a a"
-    "b c c"
-    "d d d";
+    "header header"
+    "aside main"
+    "footer footer";
+    gap: 10px;
     height: 100vh;
     width: 100vw;
-    background-color: azure;
+}    
+body{
+    font-family: sans-serif;
+    background-color: rgb(206, 206, 206);
 }
+
 .contenedor{
     font-size: 11px;
     font-weight:400;
-    color: black;
+    color: rgb(34, 34, 34);
 }
 .cabeza{
     font-size: 20px;
     font-weight: bold;
-    color: black;
+    color: rgb(34, 34, 34);
 }
 .indice{
     font-size: 17px;
     font-weight: bold;
-    color: black;
+    color: rgb(34, 34, 34);
 }
 .referencias{
 font-size: 15px;
     font-weight: bold;
-    color: black;
+    color: rgb(34, 34, 34);
 
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-between;
 }
 header{
-    grid-area: a;
+    grid-area: header;
     display: flex;
     align-items: center;
      justify-content: space-between;
@@ -44,15 +48,7 @@ header{
 
     border: 2px solid black;
     padding: 20px;
-    margin: 10px;
     background-color: rgb(174, 179, 179);
-}
-
-
-.cabeza{
-    font-size: 20px;
-    font-weight: bold;
-    color: black;
 }
 .logo{
      width: 80px;
@@ -60,25 +56,41 @@ header{
     height: auto;
     order: 1;
 }
-nav{
-     grid-area: b;
+aside{
+     grid-area: aside;
      border: 2px solid black;
     padding: 20px;
-    margin: 10px;
     background-color: white;
 }
+aside ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+aside a{
+    display: block;
+    padding: 10px 14px;
+    border-radius: 6px;
+    background-color: rgb(240, 240, 240);
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+aside a:hover{
+    background-color: rgb(174, 179, 179);
+}
 main{
-     grid-area: c;
+     grid-area: main;
      border: 2px solid black;
     padding: 20px;
-    margin: 10px;
     background-color:white;
 }
 footer{
-     grid-area: d;
+     grid-area: footer;
      border: 2px solid black;
     padding: 20px;
-    margin: 10px;
     background-color:rgb(179, 179, 179);
 }
 .encabezado{
@@ -89,22 +101,23 @@ footer{
 }
 
 main p{
-    font-family: sans-serif;
     font-size: 13px;
 }
+main img{
+    max-width: 100%;
+    height: auto;
+}
 h2{
-    font-family: sans-serif;
     font-size: 16px;
+    border-bottom: 2px solid rgb(87, 86, 86);
+    padding-bottom: 6px;
 }
 h1{
-    font-family: sans-serif;
     font-size: 24px;
 }
 a{
-    font-family: sans-serif;
     font-size: 14px;
 }
 li{
-    font-family: sans-serif;
     font-size: 13px;
 }
