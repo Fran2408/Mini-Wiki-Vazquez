@@ -5,7 +5,7 @@
     <meta charset="UFT-8">
     <title>Examen neurológico - Mi Wiki</title>
     <link rel="stylesheet" href="estilos.css">
-   
+    <script src="main.js" defer></script>
 </head>
  
 <body>
@@ -16,16 +16,17 @@
             
         </header>
         <aside class="indice">
-            <h1 id="h1"> Indice </h1>
-            <ul>
-                <li><a class="a" href="#historial">historial del paciente</a></li>
-                <br>
-                <li><a href="#inter">Interpretación</a></li>
-                <br>
-                <li><a href="#indicaciones">Indicaciones</a></li>
-                <br>
-                <li><a href="#list">Lista de pruebas</a></li>
-            </ul>
+            <h1>Índice</h1>
+    <ul id="lista-indice"></ul>
+    <div class="apariencia">
+        <h3>Apariencia</h3>
+        <button id="boton-modo" type="button">Modo oscuro</button>
+        <div class="tamanos">
+            <button type="button" class="boton-tamano" data-tamano="pequeno">Pequeño</button>
+            <button type="button" class="boton-tamano activo" data-tamano="estandar">Estándar</button>
+            <button type="button" class="boton-tamano" data-tamano="grande">Grande</button>
+        </div>
+    </div>
         </aside>
 
         <main class="contenedor">
@@ -57,6 +58,7 @@
                 causa de dicho problema, por ejemplo, determinar si se debe a una inflamación o si es congénito. [ 2 ]
             </p>
             <img src="img/TE-Nervous_system_diagram.svg.png" alt="Examen">
+            <section>
             <h2 id="historial" class="h2">Historial del paciente</h2>
             <p>
             La historia clínica del paciente es la parte más importante de un examen neurológico [ 2 ] y debe realizarse
@@ -71,6 +73,8 @@
                 <li>de consumo de drogas [ 2 ]</li>
                 <li>Historia familiar y social [ 2 ]</li>
             </ul>
+            </section>
+            <section>
             <h2 id="inter">Interpretación</h2>
             <p>
             La lateralidad manual es importante para determinar el área del cerebro relevante para el lenguaje (ya que
@@ -109,12 +113,16 @@
             </ul>
             <br>
             <img src="img/IMG_0796.jpg" alt="Resonancia" width="500" heigth="500">
+            </section>
             <br>
-            <h2>Indicaciones</h2>
-            <p id="indicaciones">Se indica un examen neurológico siempre que un profesional sanitario sospeche que un
+            <section>
+            <h2 id="indicaciones">Indicaciones</h2>
+            <p>Se indica un examen neurológico siempre que un profesional sanitario sospeche que un
                 paciente puede tener un trastorno neurológico. [3] Cualquier nuevo síntoma de cualquier orden
                 neurológico puede ser una indicación para realizar un examen neurológico.</p>
+            </section>
             <br>
+            <section>
             <h2 id="list">Lista de pruebas</h2>
             <ul>
                 <li class="li">Examen del estado mental:<ul>
@@ -138,7 +146,23 @@
                     anomalía de la neurona motora superior o del tracto piramidal , mientras que los reflejos
                     disminuidos sugieren una anomalía en el asta anterior , la neurona motora inferior , el nervio o la
                     placa motora terminal . Para esta prueba se utiliza un martillo de reflejos .</li>
-            
+            </ul>
+                </section>    
+            <section>
+                 <h2 id="discusion">Discusión</h2>
+    <form id="formulario-comentario" novalidate>
+        <label for="campo-nombre">Nombre</label>
+        <input type="text" id="campo-nombre">
+
+        <label for="campo-comentario">Comentario</label>
+        <textarea id="campo-comentario" rows="4"></textarea>
+
+        <p id="contador">0 / 200</p>
+        <p id="aviso"></p>
+        <button type="submit">Enviar</button>
+    </form>
+    <ul id="lista-comentarios"></ul>
+            </section>
         </main>
         <footer class="referencias">
             <h2 class="h2">Referencias</h2>
