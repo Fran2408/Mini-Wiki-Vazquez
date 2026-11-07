@@ -16,7 +16,7 @@ body{
 }
 
 .contenedor{
-    font-size: 11px;
+    font-size: 13px;
     font-weight:400;
     color: rgb(34, 34, 34);
 }
@@ -120,4 +120,54 @@ a{
 }
 li{
     font-size: 13px;
+}
+
+body.oscuro {
+    background-color: #1D2A31;
+    color: #EEE;
+}
+body.oscuro header,
+body.oscuro aside,
+body.oscuro main,
+body.oscuro footer {
+    background-color: #26363F;
+    color: #EEE;
+    border-color: #555;
+}
+body.oscuro a {
+    color: #8FD3F4;
+}
+body.oscuro aside a {
+    background-color: #34464F;
+}
+body.oscuro aside a:hover {
+    background-color: #4A6370;
+}
+body.oscuro h2 {
+    border-bottom-color: #555;
+}
+main.texto-pequeno p, main.texto-pequeno li, main.texto-pequeno a {
+     font-size: 11px; 
+}
+main.texto-pequeno h2 { 
+    font-size: 14px; 
+}
+main.texto-pequeno h1 { 
+    font-size: 20px; 
+}
+
+main.texto-grande p, main.texto-grande li, main.texto-grande a { 
+    font-size: 17px; 
+}
+main.texto-grande h2 { 
+    font-size: 21px; 
+}
+main.texto-grande h1 { 
+    font-size: 31px; 
+}
+.apariencia { margin-top: 20px; }
+.tamanos { display: flex; gap: 6px; margin-top: 10px; }
+.boton-tamano.activo {
+    background-color: #106D8E;
+    color: white;
 }
