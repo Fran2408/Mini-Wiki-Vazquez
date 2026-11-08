@@ -171,3 +171,16 @@ main.texto-grande h1 {
     background-color: #106D8E;
     color: white;
 }
+
+main h2 {
+    cursor: pointer;
+}
+main h2::before {
+    content: "▾ ";
+}
+main section.plegada h2::before {
+    content: "▸ ";
+}
+main section.plegada > *:not(h2) {
+    display: none;
+}

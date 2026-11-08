@@ -47,3 +47,8 @@ botonesTamano.forEach(function (botonTamano) {
     });
 });
 
+subtitulo.forEach(function (subtitulo) {
+    subtitulo.addEventListener('click', function () {
+        subtitulo.parentElement.classList.toggle('plegada');
+    });
+});
