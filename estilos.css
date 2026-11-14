@@ -184,3 +184,4 @@ main section.plegada h2::before {
 main section.plegada > *:not(h2) {
     display: none;
 }
+.error { border: 2px solid #A23B2C; }
